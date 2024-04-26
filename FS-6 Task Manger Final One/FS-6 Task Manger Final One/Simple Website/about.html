@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Website in HTML CSS</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+main {
+  background: #6610f2;
+}
+/* .container { */
+  /* max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+} */
+.cointainer {
+            height: 85vh;
+            width: 90%;
+            /* border: 1px solid black; */
+            /* background-color: white; */
+            color: rgb(255, 255, 255);
+            /* margin-top: 50px; */
+            margin-left: 40px;
+        }
+
+        .cointainer>figure>img {
+            max-width: 100%;
+            height: auto;
+            width: 350px;
+            margin-left: 40px;
+            margin-top: 150px;
+            /* margin-bottom: 20px; */
+            border-radius: 10px;
+            float: left;
+        }
+
+        .cointainer>.one {
+            width: 60%;
+            /* margin-top: 120px; */
+            margin-left: 490px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+            /* margin-top: -50px; */
+            margin-top: 190px;
+        }
+
+        .two {
+            width: 50%;
+            margin-top: 110px;
+            margin-left: 40px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .image {
+            margin-left: 820px;
+            margin-top: -260px;
+            height: auto;
+            width: 7o0px;
+        }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+ z-index: 1000;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+.nav_logo {
+  padding: 10px 0;
+}
+.menu_items {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: url(images/bg-dot.png), url(images/bg-dot.png), url(images/bg-round.png), url(images/bg-tree.png);
+  background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
+  background-repeat: no-repeat;
+}
+.curveImg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+
+#menu_toggle {
+  display: none;
+}
+
+    </style>
+    <script src="../custom-scripts.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- Header Start -->
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="#"><img src="images/logo1.png" style="width: 20%;"></a></h2>
+
+          <ul class="menu_items">
+            <img src="images/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="about.html" class="nav_link">About</a></li>
+            <li><a href="team.html" class="nav_link">Team</a></li>
+            <li><a href="contact.html" class="nav_link">Contact</a></li>
+          </ul>
+          <img src="images/bars.svg" alt="timesicon" id="menu_toggle" />
+        </nav>
+      </header>
+      <!-- Header End -->
+
+      <!-- Hero Start -->
+      <section class="hero">
+ 
+
+        <div class="row container">
+          <div class="body">
+            <div class="cointainer">
+                <figure>
+                    <img src="images/about_2.jpg" alt="">
+                </figure>
+                <h1 style="text-align: center;">About</h1>
+
+                <p class="one">The Task Manager website serves as a centralized platform for efficient organization and
+                    tracking of tasks, projects, and deadlines.
+                    With an intuitive user interface, users can create, prioritize, and monitor tasks
+                    seamlessly, enhancing productivity and collaboration.
+                    The website offers customizable features, allowing users to tailor their task management
+                    experience to meet specific project requirements and individual preferences.
+                </p>
+            </div>
+        </div>
+         
+        </div>
+        <img src="images/bg-bottom-hero.png" alt="" class="curveImg" />
+      </section>
+      <!-- Hero End-->
+    </main>
+
+    <script>
+      const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+
+      menuToggler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+      });
+    </script>
+  </body>
+</html>

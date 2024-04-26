@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  </head>
+  <style>
+             @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "raleway";
+}
+main {
+  background: #6610f2;
+}
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+ z-index: 1000;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+.nav_logo {
+  padding: 10px 0;
+}
+.menu_items {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav_link{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50px;
+}
+.nav_link:hover{
+  border: 2px solid white;
+  border-radius: 50px;
+}
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: url(images/bg-dot.png), url(images/bg-dot.png), url(images/bg-round.png), url(images/bg-tree.png);
+  background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
+  background-repeat: no-repeat;
+}
+.curveImg {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  pointer-events: none;
+  
+}
+.hero .row {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  padding: 0 60px;
+  gap: 30px;
+  justify-content: space-between;
+}
+.hero .row h2,
+.hero .row p {
+  color: #fff;
+}
+.hero .row h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.hero .column {
+  width: 50%;
+}
+.buttons {
+  display: flex;
+  margin-top: 25px;
+  gap: 10px;
+}
+.btn {
+  padding: 14px 26px;
+  background: transparent;
+  border-radius: 50px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+.btn:hover {
+    background-color: #fff;
+  color: #333;
+}
+.btn:last-child {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  margin-right: 10px;
+}
+.btn:last-child:hover {
+  background-color: #fff;
+  color: #333;
+}
+.create{
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 50px;
+    padding: 14px 26px;
+    transition: all 0.3s ease;
+    color: black;
+}
+.hero_img {
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+#menu_toggle {
+  display: none;
+}
+     #form {
+        /* background-color: #ffffff; */
+        background:lavender;
+        margin: 100px auto;
+        margin-left: 57%;
+        margin-top: -15%;
+        /* font-family: Raleway; */
+        padding: 30px;
+        width: 70%;
+        height: 800px;
+        min-width: 300px;
+        /* box-shadow: 5px 10px 10px 5px black; */
+        border-radius: 10px;
+        font-family: 'Poppins', sans-serif;
+
+    }
+    h1 {
+        text-align: center;
+        color: black;
+    }
+    input,select{
+        padding: 10px;
+        width: 95%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+        margin-left: 10px;
+        /* margin-top: 10%; */
+
+    }
+    /* #description{
+
+    } */
+    
+    input.invalid {
+        background-color: #ffdddd;
+    }
+    .tab {
+        display: none;
+        color: black;
+        margin-top: 5%;
+
+        
+    }
+    label{
+      color: black;
+      margin-top: 30px;
+
+      
+    }
+    select{
+      padding: 10px;
+      height: 40px;
+      width: 97%;
+      /* border-radius: 10px; */
+      border: none;
+      background-color: white;
+  }
+  button {
+        background-color: #08f59e;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Raleway;
+        cursor: pointer;
+    }
+    button:hover {
+        opacity: 0.8;
+    }
+    body{
+      font-family: 'Poppins', sans-serif;
+      background-attachment: fixed;
+      color:black;
+      font-size: large;
+      background: linear-gradient(135deg, #74ebd5, #ACD8AA);
+      /* background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #3be2eb 100%); */
+      /* background-image: linear-gradient(19deg, #21D4FD 0%, #a252c7 100%); */
+      overflow: hidden;
+  }
+
+
+
+.button {
+    float: right;
+    margin: 10px;
+    margin-top: 35px;
+}
+.button>a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    font-size: larger;
+}
+.button>a:hover {
+    background-color: white;
+    box-shadow: 3px 3px 5px black;
+    height: 50px;
+}
+.myForm {
+    display: flex;
+    background-color: beige;
+    border-radius: 3px;
+    padding: 1.8em;
+    width: 80%;
+    margin-left: 20%;
+    margin-top: -19%;
+    
+    
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    height:24em;
+
+
+  }
+  .description > textarea {
+   flex: 1; 
+   min-width: 18em;
+  
+    
+  }
+  .contact {
+   	flex: 1; 
+    order: 1;
+   	margin-right: 2em; 
+  }
+  .contact input{
+    width: 100%;
+    padding:10px;
+  }
+  .contact select{
+    width: 100%;
+    padding:10px;
+  }
+  .contact button {
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  .contact button {
+   background: gray;
+   color: white;
+   border: 0;
+  }
+@media screen and (max-width: 768px) {
+    #menu_toggle {
+    display: block;
+  }
+  .task-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .nav {
+    padding: 0 20px;
+    background:transparent;
+  }
+  .nav_logo {
+  background-image: url(images/logo\ F.png);
+}
+  .menu_items {
+    position: fixed;
+    top: 0;
+    width: 260px;
+    background-color: #fff;
+    height: 100%;
+    left: -100%;
+    padding: 50px 30px 30px;
+    flex-direction: column;
+    transition: all 0.5s ease;
+  }
+  .showMenu .menu_items {
+    left: 0;
+  }
+  a {
+    color: #333;
+  }
+  #menu_toggle {
+    width: 20px;
+    cursor: pointer;
+  }
+  .menu_items #menu_toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .hero {
+    padding-top: 10px;
+  }    
+    #form {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+
+        .tab {
+            margin-top: 5%;
+        }
+
+        input {
+            width: 90%;
+        }
+
+       
+        .menu_items {
+            display: none; /* Hide menu items on smaller screens */
+        }
+
+        #menu_toggle {
+            display: inline; /* Show menu toggle on smaller screens */
+        }
+
+        .nav_logo img {
+            width: 40%; /* Adjust logo size on smaller screens */
+        }
+    }
+  </style>
+  <body>
+    <main>
+      <!-- Header Start -->
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="home.html"><img src="images/logo1.png" style="width: 20%;"></a></h2>
+
+          <ul class="menu_items">
+            <img src="images/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="home.html" class="nav_link">Home</a></li>
+            <li><a href="team.html" class="nav_link">Team</a></li>
+            <li><a href="contact.html" class="nav_link">Contact</a></li>
+            <li><a href="home.html" class="nav_link"><i class="fa-solid fa-arrow-left-long"></i></a></li>
+          </ul>
+          <img src="images/bars.svg" alt="timesicon" id="menu_toggle" />
+        </nav>
+      </header>
+      <!-- Header End -->
+
+      <!-- Hero Start -->
+      <section class="hero">
+       
+        <div class="row container">
+          <form class="myForm" action="tasklist.html" method="GET">
+            <div class="description">
+          <label for="desc">Description</label><br>
+          <textarea id="description"></textarea>
+        </div>
+        <div class="contact">
+          
+           <label for="Assign To">Assign To</label>
+          <input type="text" id="taskassign">
+      
+          <label for="name"> Task Name</label>
+          <input type="text" id= "taskname">
+          
+               <label for="date">Start Date</label>
+          <input type="date" id="taskdate" oninput="validateDate()"> 
+          
+          <label for="end date">End Date</label>
+          <input type="date" id="taskenddate"> 
+          
+          <label for="Prioirity">Priority:</label><br>
+          <select name="taskpriority" id="taskpriority" required><br>
+          <option value="Select">Select</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+          </select><br>
+            <label for="Frequency">Frequency:</label><br>
+            <select name="Repeat" id="taskrepeat" required>
+              <option value="Select">Select</option>
+              <option value="Daily">Daily</option>
+              <option value="Weekly">Weekly</option>
+          </select>
+          <br><br>
+           
+          <button type="submit" onclick="saveTask()">Submit</button>
+      </div>
+      </form>
+          <div class="column">
+          </div>
+        </div>
+        <img src="images/bg-bottom-hero.png" alt="" class="curveImg" />
+      </section>
+      <!-- Hero End-->
+    </main>
+    <script>
+  function saveTask() {
+    const task = {
+      name: document.getElementById('taskname').value,
+      date: document.getElementById('taskdate').value,
+      assign: document.getElementById('taskassign').value,
+      enddate: document.getElementById('taskenddate').value,
+      priority: document.getElementById('taskpriority').value,
+      repeat: document.getElementById('taskrepeat').value,
+      description: document.getElementById('description').value,
+    };
+
+    let savedTasks = localStorage.getItem('savedTasks');
+    if (!savedTasks) {
+      savedTasks = [];
+    } else {
+      savedTasks = JSON.parse(savedTasks);
+    }
+    savedTasks.push(task);
+    localStorage.setItem('savedTasks', JSON.stringify(savedTasks));
+
+    // Redirect to the task list page
+    window.location.href = 'tasklist.html';
+  }
+  function validateDate() {
+    const selectedDate = new Date(document.getElementById('taskdate').value);
+    const currentDate = new Date();
+
+    if (selectedDate < currentDate) {
+      alert("Please select future date.");
+      document.getElementById('taskdate').value = ''; // Clear the selected date
+}
+}
+  </script>
+</body>
+</html>

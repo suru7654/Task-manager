@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Website in HTML CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+main {
+  background: #6610f2;
+}
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+ z-index: 1000;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+.nav_logo {
+  padding: 10px 0;
+}
+.menu_items {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav_link{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50px;
+}
+.nav_link:hover{
+  border: 2px solid white;
+  border-radius: 50px;
+}
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: url(images/bg-dot.png), url(images/bg-dot.png), url(images/bg-round.png), url(images/bg-tree.png);
+  background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
+  background-repeat: no-repeat;
+}
+.curveImg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+.hero .row {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  padding: 0 60px;
+  gap: 30px;
+  justify-content: space-between;
+}
+.hero .row h2,
+.hero .row p {
+  color: #fff;
+}
+.hero .row h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.hero .column {
+  width: 50%;
+}
+.buttons {
+  display: flex;
+  margin-top: 25px;
+  gap: 10px;
+}
+.btn {
+  padding: 14px 26px;
+  background: transparent;
+  border-radius: 50px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+.btn:hover {
+    background-color: #fff;
+  color: #333;
+}
+.btn:last-child {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  margin-right: 10px;
+}
+.btn:last-child:hover {
+  background-color: #fff;
+  color: #333;
+}
+.create{
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 50px;
+    padding: 14px 26px;
+    transition: all 0.3s ease;
+    color: black;
+}
+.hero_img {
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+#menu_toggle {
+  display: none;
+}
+    .content {
+      /* height: 600px; */
+      width: 74%;
+      /* border: 1px solid black; */
+      /* margin-top: 100px; */
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  i {
+
+      font-size: 35px;
+      margin-left: 95px;
+      margin-top: 50px;
+  }
+
+  h3 {
+      margin-left: 80px;
+      margin-top: 10px;
+      color: white;
+  }
+
+  p {
+      margin-left: 70px;
+      color: white;
+  }
+
+  .img_3>p {
+      margin-left: 10px;
+  }
+
+  .img_2>p {
+      margin-left: 45px;
+  }
+
+  .line {
+      height: 500px;
+      width: 0.1px;
+      border: 1px solid black;
+      margin-left: 320px;
+      /* overflow: hidden; */
+      margin-top: -500PX;
+  }
+
+  .form {
+      margin-left: 400px;
+      border: 2px solid black;
+      height: 550px;
+      width: 520px;
+      margin-top: -510px;
+      /* text-align: center; */
+      border-radius: 10px;
+      overflow: hidden;
+  }
+
+  .form>form>h2 {
+      background-color: 6610f2;
+      color: white;
+      height: 40px;
+      padding: 6px;
+      text-align: center;
+      margin-top: 0px;
+  }
+
+  .form>form>label {
+      font-size: 20px;
+      margin: 4px;
+color: white;
+      padding: 10px;
+  }
+
+  .form>form>#name {
+      margin-top: 20px;
+      line-height: 30px;
+      margin-left: 12px;
+  }
+
+  #Nam {
+      margin-left: 30px;
+  }
+
+
+  input {
+      width: 350px;
+      height: 35px;
+      border-radius: 10px;
+      border: none;
+  }
+
+  .form>form>#email {
+      margin-top: 20px;
+      margin-left: 10px;
+
+  }
+
+  .form>form>#mail {
+      margin-top: 10px;
+      margin-left: 30px;
+  }
+
+  .form>form>#message {
+
+      margin-left: 15px;
+
+  }
+
+  .form>form>#mess {
+      margin-top: 15px;
+      margin-left: 30px;
+      /* height: 60px; */
+  }
+
+  .form>form>#submit {
+      margin-top: 11px;
+      /* background-color: #6ca6be42; */
+      border: 2px solid white;
+      color: white;
+      padding: 10px;
+      margin-left: 350px;
+      border-radius: 50px;
+      width: 150px;
+      background: #6610f2;
+      cursor: pointer;
+  }
+.form > form> #submit:hover{
+  background-color: #fff;
+  color: #333;
+}
+@media screen and (max-width: 768px) {
+  #menu_toggle {
+    display: block;
+  }
+  .task-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .nav {
+    padding: 0 20px;
+    background:transparent;
+  }
+  .nav_logo {
+  background-image: url(images/logo\ F.png);
+}
+  .menu_items {
+    position: fixed;
+    top: 0;
+    width: 260px;
+    background-color: #fff;
+    height: 100%;
+    left: -100%;
+    padding: 50px 30px 30px;
+    flex-direction: column;
+    transition: all 0.5s ease;
+  }
+  .showMenu .menu_items {
+    left: 0;
+  }
+  a {
+    color: #333;
+  }
+  #menu_toggle {
+    width: 20px;
+    cursor: pointer;
+  }
+  .menu_items #menu_toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .hero {
+    padding-top: 10px;
+  }
+    .hero .row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero .row h2 {
+      font-size: 24px;
+    }
+
+    .hero .column {
+      width: 100%;
+    }
+
+    .content {
+      width: 100%;
+      padding: 20px;
+      margin-left: 10px;
+    }
+
+    .img, .img_2, .img_3 {
+      margin-bottom: 20px;
+    }
+    .form {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .line {
+    display: none;
+  }
+  input {
+width: 80%;
+}
+textarea{
+width: 80%;
+}
+
+.form > form > #submit {
+margin-left: 95px;
+width: 30%;
+}
+  }
+</style>
+  </head>
+  <body>
+    <main>
+      <!-- Header Start -->
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="home.html"><img src="images/logo1.png" style="width: 20%;"></a></h2>
+
+          <ul class="menu_items">
+            <img src="images/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="home.html" class="nav_link">Home</a></li>
+            <li><a href="team.html" class="nav_link">Team</a></li>
+          </ul>
+          <img src="images/bars.svg" alt="timesicon" id="menu_toggle" />
+        </nav>
+      </header>
+      <!-- Header End -->
+
+      <!-- Hero Start -->
+      <section class="hero">
+        <div class="content">
+          <div class="img">
+          <a href="https://maps.app.goo.gl/b5BghvH2jn7kDPB29"><i class="fa-solid fa-location-dot"></i></a>
+              <h3> Address</h3>
+              <P>TRR College</P>
+          </div>
+          <div class="img_2">
+              <a href="#"><i class="fa-solid fa-phone"></i></a>
+              <h3> Phone </h3>
+              <P>+91 9959927676</P>
+              <P>+91 9391209626</P>
+          </div>
+          <div class="img_3">
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+              <h3> Email </h3>
+              <P>sameerahmedshaik501@gmail.com</P>
+              <P>suryakiransaineni@gmail.com</P>
+          </div>
+          <div class="line">
+
+          </div>
+           <div class="form">
+            <form>
+                <h2>CONTACT US</h2>
+
+                <label for="name" id="name">Name : </label><br>
+                <input type="text" id="Nam" placeholder="Your Name"> <br><br>
+
+
+                <label for="email" id="email">Email : </label><br>
+                <input type="email" id="mail" placeholder="Your Email"> <br> <br>
+
+                <label id="message"> Message : </label><br>
+                <textarea cols="45" rows="10" id="mess" placeholder="Description"></textarea><br>
+
+                <button type="submit" id="submit"> Submit </button>
+            </form>
+        </div>
+         
+        
+      </div>
+        <div class="row container">
+          
+          <div class="column">
+           
+            </div>
+          </div>
+        
+        </div>
+        <img src="images/bg-bottom-hero.png" alt="" class="curveImg" />
+      </section>
+      <!-- Hero End-->
+    </main>
+
+    <script>
+      const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+
+      menuToggler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+      });
+    </script>
+  </body>
+  
+</html>

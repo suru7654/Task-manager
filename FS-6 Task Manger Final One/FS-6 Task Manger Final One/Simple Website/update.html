@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Website in HTML CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   <style>
+           @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+main {
+  background: #6610f2;
+}
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+ z-index: 1000;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+.nav_logo {
+  padding: 10px 0;
+}
+.menu_items {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav_link{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50px;
+}
+.nav_link:hover{
+  border: 2px solid white;
+  border-radius: 50px;
+}
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: url(images/bg-dot.png), url(images/bg-dot.png), url(images/bg-round.png), url(images/bg-tree.png);
+  background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
+  background-repeat: no-repeat;
+}
+.curveImg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+.hero .row {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  padding: 0 60px;
+  gap: 30px;
+  justify-content: space-between;
+}
+.hero .row h2,
+.hero .row p {
+  color: #fff;
+}
+.hero .row h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.hero .column {
+  width: 50%;
+}
+.buttons {
+  display: flex;
+  margin-top: 25px;
+  gap: 10px;
+}
+.btn {
+  padding: 14px 26px;
+  background: transparent;
+  border-radius: 50px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+.btn:hover {
+    background-color: #fff;
+  color: #333;
+}
+.btn:last-child {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  margin-right: 10px;
+}
+.btn:last-child:hover {
+  background-color: #fff;
+  color: #333;
+}
+.create{
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 50px;
+    padding: 14px 26px;
+    transition: all 0.3s ease;
+    color: black;
+}
+.hero_img {
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+#menu_toggle {
+  display: none;
+}
+      .submitbtn{
+        width: 100px;
+        height: 40px;
+        padding: 10px 18px;
+        background-color: #6610f2;
+        border: 2px solid white;
+        color: white;
+        /* background: linear-gradient(135deg, #74ebd5, #ACD8AA); */
+        transition: transform 250ms;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        border: none;
+       }
+       .submitbtn:hover {
+        transform: translateY(-10px);
+        background: linear-gradient(90deg,lavender	50%,lavender 50%);
+        color: black;
+        cursor: pointer;
+        outline: none;
+       }
+      #tasklinks{
+         padding: 5px;
+      }
+      #updateTaskForm {
+  margin-top: 50px;
+  background-color: white;
+  width: 450px;
+  margin-left: 35%;
+  border-radius: 10px;
+}
+form >label{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+form >input{
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: lavender;
+}
+form >select{
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: lavender;
+
+}
+form > textarea{
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: lavender;
+
+}
+
+@media only screen and (max-width: 768px) {
+  #menu_toggle {
+    display: block;
+  }
+  .task-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .nav {
+    padding: 0 20px;
+    background:transparent;
+  }
+  .nav_logo {
+  background-image: url(images/logo\ F.png);
+}
+  .menu_items {
+    position: fixed;
+    top: 0;
+    width: 260px;
+    background-color: #fff;
+    height: 100%;
+    left: -100%;
+    padding: 50px 30px 30px;
+    flex-direction: column;
+    transition: all 0.5s ease;
+  }
+  .showMenu .menu_items {
+    left: 0;
+  }
+  a {
+    color: #333;
+  }
+  #menu_toggle {
+    width: 20px;
+    cursor: pointer;
+  }
+  .menu_items #menu_toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .hero {
+    padding-top: 10px;
+  }
+  #updateTaskForm {
+      margin-top: 20px;
+      margin-left: 0;
+      width: 80%;
+      margin-left: 40px;
+    }
+}
+   </style>
+  </head>
+  <body>
+    <main>
+      <!-- Header Start -->
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="home.html"><img src="images/logo1.png" style="width: 20%;"></a></h2>
+
+          <ul class="menu_items">
+            <img src="images/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="home.html" class="nav_link">Home</a></li>
+            <li><a href="team.html" class="nav_link">Team</a></li>
+            <li><a href="contact.html" class="nav_link">Contact</a></li>
+            <li><a href="tasklist.html" class="nav_link"><i class="fa-solid fa-arrow-left-long"></i></a></li>
+          </ul>
+          <img src="images/bars.svg" alt="timesicon" id="menu_toggle" />
+        </nav>
+      </header>
+      <!-- Header End -->
+
+      <!-- Hero Start -->
+      <section class="hero">
+        <div id="updateTaskForm"></div>
+        <div class="row container">
+          
+        </div>
+        <img src="images/bg-bottom-hero.png" alt="" class="curveImg" />
+      </section>
+      <!-- Hero End-->
+    </main>
+
+    <script>
+       window.onload = function () {
+            // Fetch the index from the URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const index = parseInt(urlParams.get('index'));
+
+            // Fetch the task from localStorage based on the index
+            let savedTasks = localStorage.getItem('savedTasks');
+            if (savedTasks) {
+                savedTasks = JSON.parse(savedTasks);
+                const task = savedTasks[index];
+
+                // Create a form with the task details for updating
+                const updateForm = document.createElement('form');
+                updateForm.innerHTML = `
+                <form action="form" class="form-container">
+                  <label for="taskassign">Assign to:</label><br>
+                    <input type="text" id="taskassign" name="assign" value="${task.assign}"><br>
+                    <label for="taskname">Task name:</label><br>
+                    <input type="text" id="taskname" name="task" value="${task.name}" placeholder=" Enter the Task Name"><br>
+                    <label for="taskdate">Date:</label><br>
+                    <input type="date" id="taskdate" name="Date" oninput="validateDate()" value="${task.date}" placeholder="select a date"><br>
+
+                    <label for="taskdate">End Date:</label><br>
+                    <input type="date" id="taskenddate" name="enddate" value="${task.enddate}" placeholder="select a date">
+    
+                    <label for="taskpriority">Priority:</label><br>
+                    <select name="Priority" id="taskpriority">
+                        <option value="Select">Select</option>
+                        <option value="High" ${task.priority === 'High' ? 'selected' : ''}>High</option>
+                        <option value="Medium" ${task.priority === 'Medium' ? 'selected' : ''}>Medium</option>
+                        <option value="Low" ${task.priority === 'Low' ? 'selected' : ''}>Low</option>
+                    </select>
+                    <label for="taskrepeat">Repeat:</label><br>
+                    <select name="Repeat" id="taskrepeat">
+                        <option value="Select">Select</option>
+                        <option value="Daily" ${task.repeat === 'Daily' ? 'selected' : ''}>Daily</option>
+                        <option value="Every Monday" ${task.repeat === 'Every Monday' ? 'selected' : ''}>Weekly</option>
+                    </select>
+                    <label for="taskdescription">Description:</label><br>
+                    <textarea name="description" id="taskdescription" cols="40" rows="5" maxlength="25">${task.description}</textarea><br>
+                    <button type="button" class="submitbtn" onclick="updateTask(${index})">Update</button>
+                    </form>
+                `;
+
+                document.getElementById('updateTaskForm').appendChild(updateForm);
+            }
+        };
+
+        function updateTask(index) {
+            // Fetch the updated task details from the form
+            const updatedTask = {
+              name: document.getElementById('taskname').value,
+              date: document.getElementById('taskdate').value,
+              assign: document.getElementById('taskassign').value,
+              enddate: document.getElementById('taskenddate').value,
+              priority: document.getElementById('taskpriority').value,
+              repeat: document.getElementById('taskrepeat').value,
+              description: document.getElementById('taskdescription').value,
+            };
+
+            // Fetch the existing tasks from localStorage
+            let savedTasks = localStorage.getItem('savedTasks');
+            if (savedTasks) {
+                savedTasks = JSON.parse(savedTasks);
+
+                // Update the task at the specified index
+                savedTasks[index] = updatedTask;
+
+                // Save the updated tasks back to localStorage
+                localStorage.setItem('savedTasks', JSON.stringify(savedTasks));
+
+                // Redirect to the task list page
+                window.location.href = 'tasklist.html';
+            }
+        }
+        function validateDate() {
+    const selectedDate = new Date(document.getElementById('taskdate').value);
+    const currentDate = new Date();
+
+    if (selectedDate < currentDate) {
+      alert("Please select future date.");
+      document.getElementById('taskdate').value = ''; // Clear the selected date
+    }
+}
+      const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+
+      menuToggler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+      });
+    </script>
+  </body>
+</html>
